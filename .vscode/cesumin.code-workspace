@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "training-cesumin",
+			"path": ".."
+		},
+		{
+			"name": "16.0",
+			"path": "../../../versions/16.0"
+		}
+	],
+	"settings": {
+		"python.languageServer": "None"
+	}
+}

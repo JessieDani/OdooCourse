@@ -1,0 +1,9 @@
+{
+  "python.analysis.extraPaths": [
+    "/home/paco/odoo/versions/16.0/odoo",
+    "/home/paco/odoo/versions/16.0/enterprise",
+  ],
+  "editor.tabSize": 4,
+  "odoo.version": "16.0",
+  "odoo.addonsPath": "/home/paco/odoo/versions/${config:odoo.version}/odoo/addons,/home/paco/odoo/versions/${config:odoo.version}/enterprise,/home/paco/odoo/versions/${config:odoo.version}/design-themes",
+}

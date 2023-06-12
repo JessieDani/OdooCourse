@@ -1,0 +1,57 @@
+{
+    "configurations": [
+        {
+            "name": "Run DB",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "odoo/odoo-bin",
+            "cwd": "/home/paco/odoo/versions/${config:odoo.version}",
+            "args": [
+                "--database=cesumin",
+                "--database=macher",
+                "--init=taetigkeitserfassung",
+                // "--update=my_module",
+                "--addons-path=${config:odoo.addonsPath},${workspaceFolder}",
+                "--limit-time-cpu=0",
+                "--limit-time-real=0",
+                // "--dev=xml",
+            ]
+        },
+        {
+            "name": "Run Shell",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "odoo/odoo-bin",
+            "cwd": "/home/paco/odoo/versions/${config:odoo.version}",
+            "args": [
+                "shell",
+                "--database=cesumin",
+                // "--init=",
+                // "--update=",
+                "--addons-path=${config:odoo.addonsPath},${workspaceFolder}",
+                "--limit-time-cpu=0",
+                "--limit-time-real=0"
+            ]
+        },
+        {
+            "name": "Run Tests",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "odoo/odoo-bin",
+            "cwd": "/home/paco/odoo/versions/${config:odoo.version}",
+            "args": [
+                "--database=cesumin",
+                // "--init=my_module",
+                "--update=my_module",
+                "--addons-path=${config:odoo.addonsPath},${workspaceFolder}",
+                "--limit-time-cpu=0",
+                "--limit-time-real=0",
+                "--test-tags=custom",
+                // "--test-enable",
+            ]
+        },
+    ]
+}
