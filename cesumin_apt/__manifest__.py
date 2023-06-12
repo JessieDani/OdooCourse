@@ -9,4 +9,7 @@
         'security/ir.model.access.csv',
         'views/apt_log_views.xml',
     ],
+    'demo': [
+        'data/apt_log_demo.xml',
+    ],
 }
