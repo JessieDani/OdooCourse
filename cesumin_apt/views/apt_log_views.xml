@@ -11,6 +11,7 @@
                 <field name="datetime"/>
                 <field name="price"/>
                 <field name="seller_id"/>
+                <field name="seller"/>
                 <field name="total_price" optional="show"/>
                 <field name="transport_price" optional="hidden"/>
             </tree>

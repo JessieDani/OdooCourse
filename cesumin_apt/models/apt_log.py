@@ -21,6 +21,10 @@ class APTLog(models.Model):
         search='_search_dummy_price',
     )
     seller_id = fields.Many2one('amazon.seller')
+    seller = fields.Char()
+    # Cuando crees un `apt.log` con `seller` y no `seller_id`, tiene que crear un `amazon.seller` con name
+    # `seller` y asignarlo al `apt.log` creado
+    # Pistas: CRUD, super(), self.env['amazon.seller'].create(...)
 
     @api.constrains('price', 'transport_price')
     def _check_price(self):
