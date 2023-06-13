@@ -1,0 +1,34 @@
+<odoo>
+    <record id="amazon_seller_view_tree" model="ir.ui.view">
+        <field name="name">amazon.seller.view.tree</field>
+        <field name="model">amazon.seller</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="amazon_seller_view_form" model="ir.ui.view">
+        <field name="name">amazon.seller.view.form</field>
+        <field name="model">amazon.seller</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="log_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="amazon_seller_action_view_tree" model="ir.actions.act_window">
+        <field name="name">Amazon Seller</field>
+        <field name="res_model">amazon.seller</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="amazon_seller_menu" action="amazon_seller_action_view_tree" parent="cesumin_apt_menu_root"/>
+</odoo>

@@ -6,7 +6,7 @@
             <tree>
                 <field name="datetime"/>
                 <field name="price"/>
-                <field name="seller"/>
+                <field name="seller_id"/>
             </tree>
         </field>
     </record>
@@ -20,7 +20,8 @@
                     <group>
                         <field name="datetime"/>
                         <field name="price"/>
-                        <field name="seller"/>
+                        <field name="seller_id"/>
+                        <div/>
                     </group>
                 </sheet>
             </form>
@@ -32,9 +33,9 @@
         <field name="model">apt.log</field>
         <field name="arch" type="xml">
             <search>
-                <field name="seller"/>
+                <field name="seller_id"/>
                 <filter name="expensive" string="Expensive" domain="[('price', '>', 70)]" />
-                <filter name="seller_group" string="Seller" context="{'group_by': 'seller'}"/>
+                <filter name="seller_group" string="seller_id" context="{'group_by': 'seller_id'}"/>
             </search>
         </field>
     </record>
@@ -45,5 +46,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="apt_log_menu" action="apt_log_action_view_tree" />
+    <menuitem id="apt_log_menu" action="apt_log_action_view_tree" parent="cesumin_apt_menu_root" />
 </odoo>

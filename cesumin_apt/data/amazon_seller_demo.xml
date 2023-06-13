@@ -1,0 +1,8 @@
+<odoo>
+    <record id="amazon_seller_1" model="amazon.seller">
+        <field name="name">Seller 1</field>
+    </record>
+    <record id="amazon_seller_2" model="amazon.seller">
+        <field name="name">Seller 2</field>
+    </record>
+</odoo>

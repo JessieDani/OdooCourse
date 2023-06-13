@@ -2,11 +2,11 @@
     <record id="apt_log_1" model="apt.log">
         <field name="datetime" eval="datetime(2022, 1, 1)" />
         <field name="price">50.6</field>
-        <field name="seller">Seller 1</field>
+        <field name="seller_id" ref="amazon_seller_1"/>
     </record>
     <record id="apt_log_2" model="apt.log">
         <field name="datetime" eval="datetime(2022, 2, 1)" />
         <field name="price">33.77</field>
-        <field name="seller">Seller 2</field>
+        <field name="seller_id" ref="cesumin_apt.amazon_seller_2"/>
     </record>
 </odoo>
