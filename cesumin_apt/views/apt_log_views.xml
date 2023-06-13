@@ -28,6 +28,7 @@
                         <field name="datetime"/>
                         <field name="price"/>
                         <field name="seller_id"/>
+                        <field name="seller"/>
                         <!-- Si quieres usar algo en attrs el campo tiene que estar en la vista (aunque sea invisible) -->
                         <field
                             name="transport_price"
