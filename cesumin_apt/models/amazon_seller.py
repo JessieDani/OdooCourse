@@ -12,3 +12,13 @@ class AmazonSeller(models.Model):
     # column1="amazon_seller_id"    column2="amazon_seller_tag_id"
     # A veces necesario (m2m a si mismo, varios m2m...)
     tag_ids = fields.Many2many('amazon.seller.tag')
+
+    _sql_constraints = [
+        ('unique_name', 'unique(name)', 'You cannot repite names!'),
+    ]
+
+    def action_increase_price(self):
+        # Incrementa 10% el precio en todos los logs relacionados
+        self.ensure_one()
+        for log in self.log_ids:
+            log.price = log.price * 1.1

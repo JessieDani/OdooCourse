@@ -1,4 +1,5 @@
-from odoo import api, models, fields
+from odoo import _, api, models, fields
+from odoo.exceptions import ValidationError
 
 
 class APTLog(models.Model):
@@ -19,6 +20,14 @@ class APTLog(models.Model):
         search='_search_dummy_price',
     )
     seller_id = fields.Many2one('amazon.seller')
+
+    @api.constrains('price', 'transport_price')
+    def _check_price(self):
+        for log in self:
+            if log.transport_price > log.price:
+                raise ValidationError(
+                    _('Transport price cannot be greater than price: %s > %s', log.transport_price, log.price)
+                )
 
     @api.depends('price', 'transport_price')
     def _compute_total_price(self):

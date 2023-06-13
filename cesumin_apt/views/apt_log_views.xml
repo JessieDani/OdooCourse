@@ -3,7 +3,9 @@
         <field name="name">apt.log.view.tree</field>
         <field name="model">apt.log</field>
         <field name="arch" type="xml">
-            <tree editable="bottom">
+            <!-- Para que se pueda modificar y agregar records directmente desde la tree view, editable="bottom" or top -->
+            <!-- <tree editable="bottom"> -->
+            <tree>
                 <field name="datetime"/>
                 <field name="price"/>
                 <field name="seller_id"/>
