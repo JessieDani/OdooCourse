@@ -20,6 +20,11 @@
                     <button name="%(apt_log_action_view_tree)d" type="action" string="Open Logs"/>
                 </header>
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_logs" type="object" class="oe_stat_button" icon="fa-list icon">
+                            <field string="Logs" name="log_count" widget="statinfo"/>
+                        </button>
+                    </div>
                     <group>
                         <field name="name"/>
                         <field name="log_ids">
