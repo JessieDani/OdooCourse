@@ -4,7 +4,7 @@
         <field name="model">amazon.seller</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
+                <field name="name" string="Seller Modified"/>
             </tree>
         </field>
     </record>
@@ -17,10 +17,35 @@
                 <sheet>
                     <group>
                         <field name="name"/>
-                        <field name="log_ids"/>
+                        <field name="log_ids">
+                            <tree>
+                                <field name="datetime"/>
+                                <field name="price"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="datetime"/>
+                                    <field name="price"/>
+                                </group>
+                            </form>
+                        </field>
+                        <!-- Docs a lista de widget -->
+                        <!-- https://www.odoo.com/documentation/16.0/developer/reference/frontend/javascript_reference.html?highlight=many2many_tags#field-widgets -->
+                        <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <record id="amazon_seller_view_search" model="ir.ui.view">
+        <field name="name">amazon.seller.view.search</field>
+        <field name="model">amazon.seller</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="tag_ids"/>
+            </search>
         </field>
     </record>
 
