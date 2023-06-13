@@ -5,10 +5,14 @@
         <field name="arch" type="xml">
             <!-- Para que se pueda modificar y agregar records directmente desde la tree view, editable="bottom" or top -->
             <!-- <tree editable="bottom"> -->
+            <!-- Para ordenar -->
+            <!-- <tree default_order="price"> -->
             <tree>
                 <field name="datetime"/>
                 <field name="price"/>
                 <field name="seller_id"/>
+                <field name="total_price" optional="show"/>
+                <field name="transport_price" optional="hidden"/>
             </tree>
         </field>
     </record>
@@ -23,7 +27,11 @@
                         <field name="datetime"/>
                         <field name="price"/>
                         <field name="seller_id"/>
-                        <field name="transport_price"/>
+                        <!-- Si quieres usar algo en attrs el campo tiene que estar en la vista (aunque sea invisible) -->
+                        <field
+                            name="transport_price"
+                            attrs="{'invisible': ['!', ('transport_price', '>', 0)]}"
+                        />
                         <field name="total_price"/>
                     </group>
                 </sheet>
@@ -50,4 +58,13 @@
     </record>
 
     <menuitem id="apt_log_menu" action="apt_log_action_view_tree" parent="cesumin_apt_menu_root" />
+
+    <record id="apt_log_action_view_tree_groupby" model="ir.actions.act_window">
+        <field name="name">APT Log Group By</field>
+        <field name="res_model">apt.log</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_seller_group': 1}</field>
+    </record>
+
+    <menuitem id="apt_log_menu_groupby" action="apt_log_action_view_tree_groupby" parent="cesumin_apt_menu_root" />
 </odoo>

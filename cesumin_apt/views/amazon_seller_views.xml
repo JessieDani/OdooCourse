@@ -25,6 +25,8 @@
                             <tree>
                                 <field name="datetime"/>
                                 <field name="price"/>
+                                <field name="total_price" optional="hidden"/>
+                                <field name="transport_price" optional="hidden"/>
                             </tree>
                             <form>
                                 <group>
@@ -35,6 +37,7 @@
                         </field>
                         <!-- Docs a lista de widget -->
                         <!-- https://www.odoo.com/documentation/16.0/developer/reference/frontend/javascript_reference.html?highlight=many2many_tags#field-widgets -->
+                        <!-- Interesantes: many2many_tags, handle -->
                         <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                     </group>
                 </sheet>
