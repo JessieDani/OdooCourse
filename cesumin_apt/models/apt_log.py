@@ -21,10 +21,35 @@ class APTLog(models.Model):
         search='_search_dummy_price',
     )
     seller_id = fields.Many2one('amazon.seller')
-    seller = fields.Char()
+    seller = fields.Char(string="Seller Create")
     # Cuando crees un `apt.log` con `seller` y no `seller_id`, tiene que crear un `amazon.seller` con name
     # `seller` y asignarlo al `apt.log` creado
     # Pistas: CRUD, super(), self.env['amazon.seller'].create(...)
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('seller') and not vals.get('seller_id'):
+                seller = self.env['amazon.seller'].create({'name': vals.get('seller')})
+                vals.update(seller_id=seller.id)
+        return super().create(vals_list)
+
+    # Estructura create y write para modificaciones en creacion/actualizacion de records
+    # @api.model_create_multi
+    # def create(self, vals_list):
+    #     # ... Cosas antes de crear, normalment interactuando con vals_list
+    #     records = super().create(vals_list)
+    #     # ... Cosas despues de crear, normalmente interactuando con records
+    #     return records
+
+    # def write(self, vals):
+    #     # ... Cosas antes de escribir, normalment interactuando con self y vals
+    #     result = super().write(vals)
+    #     # ... Cosas despues de escribir, normalmente interactuando con self
+    #     return result
+
+    # Si queremos hacer algo relacion con delete, mejor que sobreescribir unlink, podemos usar
+    # @api.ondelete si es para temas de restricciones
 
     @api.constrains('price', 'transport_price')
     def _check_price(self):

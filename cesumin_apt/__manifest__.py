@@ -8,8 +8,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/cesumin_apt_menus.xml',
-        'views/amazon_seller_views.xml',
         'views/apt_log_views.xml',
+        'views/amazon_seller_views.xml',
     ],
     'demo': [
         'data/amazon_seller_demo.xml',
