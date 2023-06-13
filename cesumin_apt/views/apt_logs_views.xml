@@ -1,12 +1,12 @@
 <odoo>
-    <record id="apt_log_view_tree" model="ir.ui.view">
+      <record id="apt_log_view_tree" model="ir.ui.view">
         <field name="name">apt.log.view.tree</field>
         <field name="model">apt.log</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="datetime"/>
                 <field name="price"/>
-                <field name="seller"/>
+                <field name="seller_id"/>
             </tree>
         </field>
     </record>
@@ -20,7 +20,7 @@
                     <group>
                         <field name="datetime"/>
                         <field name="price"/>
-                        <field name="seller"/>
+                        <field name="seller_id"/>
                     </group>
                 </sheet>
             </form>
@@ -30,8 +30,8 @@
     <record id="apt_log_action_view_tree" model="ir.actions.act_window">
         <field name="name">APT Log</field>
         <field name="res_model">apt.log</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree.form</field>
     </record>
 
-    <menuitem id="apt_log_menu" action="apt_log_action_view_tree" />
+    <menuitem id="apt_log_menu" action="apt_log_action_view_tree" parent='cesumin_apt_menu_root'/>
 </odoo>

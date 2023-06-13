@@ -7,4 +7,4 @@ class APTLog(models.Model):
 
     datetime = fields.Datetime()
     price = fields.Float()
-    seller = fields.Char()
+    seller_id = fields.Many2one('amazon.seller')

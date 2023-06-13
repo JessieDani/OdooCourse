@@ -1,0 +1,12 @@
+<odoo>
+    <record id='amazon_seller_1' model='apt.log'>
+        <field name='datetime' eval='datetime(2022, 1, 1)'/>
+        <field name='price'>50.6<field/>
+        <field name='seller_1' ref=''/>
+    <record/>
+    <record id='amazon_seller_2' model='apt.log'>
+        <field name='datetime' eval='datetime(2022, 2, 1)'/>
+        <field name='price'>80.6<field/>
+        <field name='seller_id' ref=''> paco</field>
+    <record/>
+</odoo>
