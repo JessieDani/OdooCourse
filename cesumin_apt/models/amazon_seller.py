@@ -22,3 +22,21 @@ class AmazonSeller(models.Model):
         self.ensure_one()
         for log in self.log_ids:
             log.price = log.price * 1.1
+
+    def action_context(self):
+        self.ensure_one()
+        self = self.with_context(always=1111)
+        self.with_context(example=432)._action_context1()
+        self.with_context(example_2=312321)._action_context2()
+        # Aqui self._context no tiene definido ni example ni example_2, porque el contexto se pierde
+        # una vez la llamada se devuelve, pero si tiene self._context.get('always') = 1111
+
+    def _action_context1(self):
+        # Aqui self._context.get('example') = 432
+        # self._context.get('always') = 1111
+        pass
+
+    def _action_context2(self):
+        # Aqui self._context.get('example_2') = 312321
+        # self._context.get('always') = 1111
+        pass

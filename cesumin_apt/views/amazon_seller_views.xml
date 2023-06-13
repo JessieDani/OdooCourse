@@ -16,6 +16,7 @@
             <form>
                 <header>
                     <button name="action_increase_price" type="object" string="Increase Price"/>
+                    <button name="action_context" type="object" string="Context Demo"/>
                     <button name="%(apt_log_action_view_tree)d" type="action" string="Open Logs"/>
                 </header>
                 <sheet>
