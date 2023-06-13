@@ -3,7 +3,7 @@
         <field name="name">apt.log.view.tree</field>
         <field name="model">apt.log</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree editable="bottom">
                 <field name="datetime"/>
                 <field name="price"/>
                 <field name="seller_id"/>
@@ -21,7 +21,8 @@
                         <field name="datetime"/>
                         <field name="price"/>
                         <field name="seller_id"/>
-                        <div/>
+                        <field name="transport_price"/>
+                        <field name="total_price"/>
                     </group>
                 </sheet>
             </form>

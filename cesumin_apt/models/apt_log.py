@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import api, models, fields
 
 
 class APTLog(models.Model):
@@ -7,4 +7,37 @@ class APTLog(models.Model):
 
     datetime = fields.Datetime()
     price = fields.Float()
+    transport_price = fields.Float()
+    # Param store=True para que se guarde en la base de datos
+    total_price = fields.Float(
+        compute='_compute_total_price',
+        readonly=False,
+        inverse='_inverse_total_price',
+    )
+    dummy_price = fields.Float(
+        compute='_compute_dummy_price',
+        search='_search_dummy_price',
+    )
     seller_id = fields.Many2one('amazon.seller')
+
+    @api.depends('price', 'transport_price')
+    def _compute_total_price(self):
+        for log in self:
+            log.total_price = log.price + log.transport_price
+
+    @api.depends('price')
+    def _compute_dummy_price(self):
+        for log in self:
+            log.total_price = 2 * log.price
+
+    def _inverse_total_price(self):
+        for log in self:
+            log.transport_price = log.total_price - log.price
+
+    @api.onchange('datetime')
+    def _onchange_datetime(self):
+        self.transport_price = 0
+
+    @api.model
+    def _search_dummy_price(self, operator, value):
+        return [('price', operator, value/2)]
