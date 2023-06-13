@@ -22,6 +22,22 @@ class APTLog(models.Model):
     )
     seller_id = fields.Many2one('amazon.seller')
     seller = fields.Char()
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('seller') and not vals.get('seller_id'):
+                seller = self.env['amazon.seller'].create({'name' : vals.get('seller')})
+                vals.update(seller_id=seller.id)
+        return super().create(vals_list)
+
+
+        
+        
+        
+
+    
+
     # Cuando crees un `apt.log` con `seller` y no `seller_id`, tiene que crear un `amazon.seller` con name
     # `seller` y asignarlo al `apt.log` creado
     # Pistas: CRUD, super(), self.env['amazon.seller'].create(...)
