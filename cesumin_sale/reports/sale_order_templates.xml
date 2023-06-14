@@ -1,19 +1,10 @@
 <odoo>
-    <template id="cesumin_sel_report_doc">
-        <t t-call="web.external_layout">
-            <h2 t-field="o.name" />
-            <t t-if="o.log_ids">
-                <h3>Logs</h3>
-                <ul>
-                    <t t-foreach="o.log_ids" t-as="log">
-                        <li>
-                            <span t-field="log.datetime"/>
-                        </li>
-                    </t>
-                </ul>
-            </t>
-        </t>
+    <template id="report_saleorder_document_inherit_cesumin_sale" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//p[@t-field='doc.user_id']/.." position="after">
+            <div t-if="doc.example" class="col-auto col-3 mw-100 mb-2">
+                <strong>Example:</strong>
+                <p class="m-0" t-field="doc.example"/>
+            </div>
+        </xpath>
     </template>
-
-
 </odoo>
