@@ -1,0 +1,9 @@
+<odoo>
+    <record id="cesumin_sale_order_action_report" model="ir.actions.report">
+        <field name="name">Summary</field>
+        <field name="model">sale_order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">cesumin_sale.cesumin_sale_report</field>
+        <field name="binding_model_id" ref="model_amazon_seller"/>
+    </record>
+</odoo>
