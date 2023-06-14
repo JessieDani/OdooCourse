@@ -18,3 +18,20 @@ class AmazonSellerTest(TransactionCase):
 
     # Crear test que prueba la accion action_increase_price
     # Pista: self.assertEqual
+    def test_action_increase_price(self):
+        prices = list(range(0, 100, 10))
+        logs = self.env['apt.log'].create([
+            {
+                "price": price,
+                "seller_id": self.seller.id
+            } for price in prices
+        ])
+        self.assertEqual(logs, self.seller.log_ids)
+        to_check = logs.mapped(lambda l: (l, l.price))
+        self.seller.action_increase_price()
+        for log, old_price in to_check:
+            self.assertAlmostEqual(log.price, old_price*1.1)
+    # Cuando desarrollar tests:
+    # - Cuando implementamos nueva logica
+    # - Para testear constraints
+    # - Cuando arreglamos un bug, crear test recreando el comportamiento que hacia fallar el codigo, checkear que falla antes del commit del fix y pasa despues
