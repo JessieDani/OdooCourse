@@ -1,9 +1,10 @@
 <odoo>
     <template id="report_saleorder_document_inherit_cesumin_sale" inherit_id="sale.report_saleorder_document">
         <xpath expr="//p[@t-field='doc.user_id']/.." position="after">
+            <t t-set="useless_variable" t-value="23 + 3" />
             <div t-if="doc.example" class="col-auto col-3 mw-100 mb-2">
                 <strong>Example:</strong>
-                <p class="m-0" t-field="doc.example"/>
+                <p class="m-0" t-att-useless="useless_variable" t-attf-f_useless="string {{useless_variable}}" t-field="doc.example"/>
             </div>
         </xpath>
     </template>

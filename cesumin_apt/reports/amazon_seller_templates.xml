@@ -1,7 +1,7 @@
 <odoo>
     <template id="amazon_seller_report_doc">
         <t t-call="web.external_layout">
-            <h2 t-field="o.name" />
+            <h2 class="amazon_title" t-field="o.name" />
             <t t-if="o.log_ids">
                 <h3>Logs</h3>
                 <ul>
