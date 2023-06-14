@@ -18,3 +18,9 @@ class AmazonSellerTest(TransactionCase):
 
     # Crear test que prueba la accion action_increase_price
     # Pista: self.assertEqual
+    def test_increase_price(self):
+        record = self.env['apt.log'].create({'seller':'Test Seller 2','price':'22.58'})
+        price1=record.price
+        record.seller_id.action_increase_price()        
+        self.assertAlmostEqual(record.price,price1 * 1.10)
+        
