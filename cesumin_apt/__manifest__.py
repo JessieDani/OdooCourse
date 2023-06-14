@@ -17,4 +17,9 @@
         'data/amazon_seller_demo.xml',
         'data/apt_log_demo.xml',
     ],
+    'assets': {
+        'web.report_assets_common': [
+            'cesumin_apt/static/src/scss/*.scss',
+        ],
+    },
 }

@@ -1,9 +1,25 @@
 <odoo>
+    <record id="paperformat_cesumin" model="report.paperformat">
+        <field name="name">Cesumin</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">32</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
     <record id="amazon_seller_action_report" model="ir.actions.report">
         <field name="name">Summary</field>
         <field name="model">amazon.seller</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">cesumin_apt.amazon_seller_report</field>
+        <field name="paperformat_id" ref="paperformat_cesumin"/>
         <field name="binding_model_id" ref="model_amazon_seller"/>
     </record>
 </odoo>
