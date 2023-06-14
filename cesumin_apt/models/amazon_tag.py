@@ -1,9 +1,9 @@
 from odoo import models, fields
 
 
-class AmazonSellerTag(models.Model):
-    _name = 'amazon.seller.tag'
-    _description = 'Amazon Seller Tag'
+class AmazonTag(models.Model):
+    _name = 'amazon.tag'
+    _description = 'Amazon Tag'
 
     # Algunos parametros interesantes
     # default -> valor o funcion

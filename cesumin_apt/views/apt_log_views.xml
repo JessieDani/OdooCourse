@@ -11,7 +11,6 @@
                 <field name="datetime"/>
                 <field name="price"/>
                 <field name="seller_id"/>
-                <field name="seller"/>
                 <field name="total_price" optional="show"/>
                 <field name="transport_price" optional="hidden"/>
             </tree>
@@ -35,6 +34,7 @@
                             attrs="{'invisible': ['!', ('transport_price', '>', 0)]}"
                         />
                         <field name="total_price"/>
+                        <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                     </group>
                 </sheet>
             </form>
