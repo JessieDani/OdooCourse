@@ -47,6 +47,11 @@
                         <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
             </form>
         </field>
     </record>

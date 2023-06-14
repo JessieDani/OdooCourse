@@ -3,7 +3,7 @@
     'summary': "Cesumin APT",
     'version': '16.0.1.0.0',
     'depends': [
-        'base',
+        'mail',
     ],
     'data': [
         'security/ir.model.access.csv',

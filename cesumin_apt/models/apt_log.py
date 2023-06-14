@@ -5,6 +5,7 @@ from odoo.exceptions import ValidationError
 class APTLog(models.Model):
     _name = 'apt.log'
     _description = 'Amazon Price Tracker Log'
+    _inherit = ['add.tag']
     _order = 'datetime desc'
 
     datetime = fields.Datetime()
