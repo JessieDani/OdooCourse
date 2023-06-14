@@ -8,6 +8,8 @@
     <record id="view_order_form" model="ir.ui.view">
         <field name="name">sale.order.view.form.inherit.cesumin.sale</field>
         <field name="model">sale.order</field>
+        <!-- Cuando se aplica nuestras modificaciones con respecto a otras -->
+        <field name="priority">55</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='date_order'][2]" position="after">
