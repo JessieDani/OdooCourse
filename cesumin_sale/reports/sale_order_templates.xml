@@ -1,0 +1,10 @@
+<odoo>
+    <template id="report_saleorder_document_inherit_cesumin_sale" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//p[@t-field='doc.user_id']/.." position="after">
+            <div t-if="doc.example" class="col-auto col-3 mw-100 mb-2">
+                <strong>Example:</strong>
+                <p class="m-0" t-field="doc.example"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
