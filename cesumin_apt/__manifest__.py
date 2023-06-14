@@ -10,6 +10,8 @@
         'views/cesumin_apt_menus.xml',
         'views/apt_log_views.xml',
         'views/amazon_seller_views.xml',
+        'reports/amazon_seller_reports.xml',
+        'reports/amazon_seller_templates.xml',
     ],
     'demo': [
         'data/amazon_seller_demo.xml',
