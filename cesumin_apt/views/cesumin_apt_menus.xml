@@ -1,3 +1,8 @@
 <odoo>
+<<<<<<< HEAD
     <menuitem id="cesumin_apt_menu_root" name="APT"/>
 </odoo>
+=======
+    <menuitem id='cesumin_apt_menu_root' name='APT'>
+</odoo>
+>>>>>>> 36cff15413a417ee009cb2fd60ea4c354b293bb1

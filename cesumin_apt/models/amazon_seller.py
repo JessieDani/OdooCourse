@@ -1,6 +1,7 @@
 from odoo import models, fields
 
 
+<<<<<<< HEAD
 class AmazonSeller(models.Model):
     _name = 'amazon.seller'
     _description = 'Amazon Seller'
@@ -60,3 +61,12 @@ class AmazonSeller(models.Model):
         # Aqui self._context.get('example_2') = 312321
         # self._context.get('always') = 1111
         pass
+=======
+class APTLog(models.Model):
+    _name = 'amazon.seller'
+    _description = 'Amazon Seller'
+
+    name = fields.Char()
+    log_ids = fields.One2many('apt.log', inverse_name='seller_id')
+    tag_ids = fields.Many2many('amazon.seller.tag')
+>>>>>>> 36cff15413a417ee009cb2fd60ea4c354b293bb1

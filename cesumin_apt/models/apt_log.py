@@ -9,6 +9,7 @@ class APTLog(models.Model):
 
     datetime = fields.Datetime()
     price = fields.Float()
+<<<<<<< HEAD
     transport_price = fields.Float()
     # Param store=True para que se guarde en la base de datos
     total_price = fields.Float(
@@ -55,3 +56,6 @@ class APTLog(models.Model):
     @api.model
     def _search_dummy_price(self, operator, value):
         return [('price', operator, value/2)]
+=======
+    seller_id = fields.Many2one('amazon.seller')
+>>>>>>> 36cff15413a417ee009cb2fd60ea4c354b293bb1

@@ -1,4 +1,5 @@
 <odoo>
+<<<<<<< HEAD
     <record id="amazon_seller_1" model="amazon.seller">
         <field name="name">Seller 1</field>
     </record>
@@ -6,3 +7,16 @@
         <field name="name">Seller 2</field>
     </record>
 </odoo>
+=======
+    <record id='amazon_seller_1' model='apt.log'>
+        <field name='datetime' eval='datetime(2022, 1, 1)'/>
+        <field name='price'>50.6<field/>
+        <field name='seller_1' ref=''/>
+    <record/>
+    <record id='amazon_seller_2' model='apt.log'>
+        <field name='datetime' eval='datetime(2022, 2, 1)'/>
+        <field name='price'>80.6<field/>
+        <field name='seller_2' ref=''/>
+    <record/>
+</odoo>
+>>>>>>> 36cff15413a417ee009cb2fd60ea4c354b293bb1

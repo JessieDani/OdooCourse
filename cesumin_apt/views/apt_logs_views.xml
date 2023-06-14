@@ -1,5 +1,5 @@
 <odoo>
-    <record id="apt_log_view_tree" model="ir.ui.view">
+      <record id="apt_log_view_tree" model="ir.ui.view">
         <field name="name">apt.log.view.tree</field>
         <field name="model">apt.log</field>
         <field name="arch" type="xml">
@@ -11,9 +11,12 @@
                 <field name="datetime"/>
                 <field name="price"/>
                 <field name="seller_id"/>
+<<<<<<< HEAD:cesumin_apt/views/apt_log_views.xml
                 <field name="seller"/>
                 <field name="total_price" optional="show"/>
                 <field name="transport_price" optional="hidden"/>
+=======
+>>>>>>> 36cff15413a417ee009cb2fd60ea4c354b293bb1:cesumin_apt/views/apt_logs_views.xml
             </tree>
         </field>
     </record>
@@ -28,12 +31,15 @@
                         <field name="datetime"/>
                         <field name="price"/>
                         <field name="seller_id"/>
+<<<<<<< HEAD:cesumin_apt/views/apt_log_views.xml
                         <!-- Si quieres usar algo en attrs el campo tiene que estar en la vista (aunque sea invisible) -->
                         <field
                             name="transport_price"
                             attrs="{'invisible': ['!', ('transport_price', '>', 0)]}"
                         />
                         <field name="total_price"/>
+=======
+>>>>>>> 36cff15413a417ee009cb2fd60ea4c354b293bb1:cesumin_apt/views/apt_logs_views.xml
                     </group>
                 </sheet>
             </form>
@@ -55,9 +61,10 @@
     <record id="apt_log_action_view_tree" model="ir.actions.act_window">
         <field name="name">APT Log</field>
         <field name="res_model">apt.log</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree.form</field>
     </record>
 
+<<<<<<< HEAD:cesumin_apt/views/apt_log_views.xml
     <menuitem id="apt_log_menu" action="apt_log_action_view_tree" parent="cesumin_apt_menu_root" />
 
     <record id="apt_log_action_view_tree_groupby" model="ir.actions.act_window">
@@ -69,3 +76,7 @@
 
     <menuitem id="apt_log_menu_groupby" action="apt_log_action_view_tree_groupby" parent="cesumin_apt_menu_root" />
 </odoo>
+=======
+    <menuitem id="apt_log_menu" action="apt_log_action_view_tree" parent='cesumin_apt_menu_root'/>
+</odoo>
+>>>>>>> 36cff15413a417ee009cb2fd60ea4c354b293bb1:cesumin_apt/views/apt_logs_views.xml
