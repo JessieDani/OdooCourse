@@ -1,0 +1,10 @@
+<odoo>
+    <record id="action_server_sale_order_confirm" model="ir.actions.server">
+        <field name="name">Confirm Sale Orders</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <!-- Para que aparezca tienes que poner el binding_model tambien -->
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">records.action_confirm()</field>
+    </record>
+</odoo>
