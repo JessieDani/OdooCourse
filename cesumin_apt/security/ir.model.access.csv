@@ -1,4 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 cesumin_apt.access_apt_log,access_apt_log,cesumin_apt.model_apt_log,base.group_user,1,1,1,1
-cesumin_apt.access_amazon_seller,access_amazon_seller,cesumin_apt.model_amazon_seller,base.group_user,1,1,1,1
+cesumin_apt.access_amazon_seller,access_amazon_seller,cesumin_apt.model_amazon_seller,base.group_user,1,0,0,0
+cesumin_apt.access_amazon_seller_user,access_amazon_seller_user,cesumin_apt.model_amazon_seller,cesumin_apt_group_user,1,1,1,0
+cesumin_apt.access_amazon_seller_manager,access_amazon_seller_manager,cesumin_apt.model_amazon_seller,cesumin_apt_group_manager,1,1,1,1
 cesumin_apt.access_amazon_tag,access_amazon_tag,cesumin_apt.model_amazon_tag,base.group_user,1,1,1,1

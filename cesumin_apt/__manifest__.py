@@ -6,6 +6,8 @@
         'mail',
     ],
     'data': [
+        'security/cesumin_apt_groups.xml',
+        'security/cesumin_apt_security.xml',
         'security/ir.model.access.csv',
         'views/cesumin_apt_menus.xml',
         'views/apt_log_views.xml',
