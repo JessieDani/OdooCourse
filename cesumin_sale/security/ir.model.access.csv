@@ -1,3 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-cesumin_apt.access_apt_log,access_apt_log,cesumin_apt.model_apt_log,base.group_user,1,1,1,1
-
+cesumin_sale.access_create_sale_order,access_create_sale_order,cesumin_sale.model_create_sale_order,base.group_user,1,1,1,1
