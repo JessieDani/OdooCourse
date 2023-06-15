@@ -1,0 +1,6 @@
+<odoo>
+    <template id="hola_template">
+        <div>Hola</div>
+        <t t-out="arg1" />
+    </template>
+</odoo>
