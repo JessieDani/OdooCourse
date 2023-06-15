@@ -16,7 +16,7 @@ from odoo.addons.account.tests.test_tour import TestUi
 #     """
 
 # Si el test no es relevante nos lo saltamos
-@unittest.skip()
+@unittest.skip('monkey patch')
 def monkey_patch(self):
     pass
 
