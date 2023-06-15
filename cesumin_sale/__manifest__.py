@@ -6,6 +6,8 @@
         'sale',
     ],
     'data': [
+        'data/ir_actions_server_data.xml',
+        'data/ir_cron_data.xml',
         'security/ir.model.access.csv',
         'views/res_partner_views.xml',
         'views/sale_order_views.xml',

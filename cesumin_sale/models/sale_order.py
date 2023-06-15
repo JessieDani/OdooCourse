@@ -16,3 +16,7 @@ class SaleOrder(models.Model):
     def load(self, fields, data):
         # operaciones con uom
         return super().load(fields, data)
+
+    @api.model
+    def cron_print(self):
+        print(self.env['sale.order'].search_count([]))
