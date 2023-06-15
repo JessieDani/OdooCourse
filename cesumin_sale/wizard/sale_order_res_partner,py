@@ -12,4 +12,5 @@ class CreateSaleOrder(models.TransientModel):
     quantity = fields.Float()
 
     def action_confirm(self):
+        
         pass
