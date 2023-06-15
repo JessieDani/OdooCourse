@@ -1,0 +1,16 @@
+from odoo import models, fields, wizard
+
+
+class CreateSaleOrder(models.TransientModel):
+
+    _name = 'create.sale.order'
+    _description = 'Create wizard to create order from partner'
+    _inherit = ["mail.thread", "mail.activity.mixin", "add.tag"]
+    partner_id = fields.Many2one('res.partner', string='Customer')
+    date = fields.Datetime()
+    pricelist_id = fields.Many2one('product.pricelist')
+    quantity = fields.Float()
+
+    def action_confirm(self):
+        
+        pass
