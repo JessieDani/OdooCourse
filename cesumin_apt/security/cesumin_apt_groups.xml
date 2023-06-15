@@ -1,0 +1,16 @@
+<odoo>
+    <record id="cesumin_apt_category" model="ir.module.category">
+        <field name="name">Amazon Seller</field>
+        <field name="parent_id" ref="base.module_category_administration"/>
+    </record>
+    <record id="cesumin_apt_group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="cesumin_apt_category" />
+        <field name="implied_ids" eval="[Command.link(ref('base.group_user'))]"/>
+    </record>
+    <record id="cesumin_apt_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="cesumin_apt_category" />
+        <field name="implied_ids" eval="[Command.link(ref('cesumin_apt_group_user'))]"/>
+    </record>
+</odoo>

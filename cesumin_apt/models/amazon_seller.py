@@ -7,6 +7,7 @@ class AmazonSeller(models.Model):
     _inherit = ["mail.thread", "mail.activity.mixin", "add.tag"]
 
     name = fields.Char(string="Seller")
+    company_id = fields.Many2one('res.company', default=lambda self: self.env.company)
     log_ids = fields.One2many('apt.log', inverse_name='seller_id')
     # Parametros en m2m para cambiar nombre tabla y columnas, esto es el por defecto
     # relation="amazon_seller_amazon_seller_tag_rel"
