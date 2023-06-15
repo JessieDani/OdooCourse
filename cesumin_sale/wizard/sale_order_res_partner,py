@@ -10,4 +10,6 @@ class CreateSaleOrder(models.TransientModel):
     date = fields.Datetime()
     pricelist_id = fields.Many2one('product.pricelist')
     quantity = fields.Float()
-    
+
+    def action_confirm(self):
+        pass
