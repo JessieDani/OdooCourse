@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import _, models, fields
 
 
 class AmazonSeller(models.Model):
@@ -41,7 +41,7 @@ class AmazonSeller(models.Model):
     def action_view_logs(self):
         self.ensure_one()
         return {
-            "name": "APT Log Group By",
+            "name": _("APT Log Group By"),
             "type": "ir.actions.act_window",
             "res_model": "apt.log",
             "view_mode": "tree,form",
