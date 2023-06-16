@@ -1,0 +1,21 @@
+<odoo>
+    <record id="amazon_tag_view_tree" model="ir.ui.view">
+        <field name="name">amazon.tag.view.tree</field>
+        <field name="model">amazon.tag</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+                <field name="parent_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="amazon_tag_action_view_tree" model="ir.actions.act_window">
+        <field name="name">Amazon Tags</field>
+        <field name="res_model">amazon.tag</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="amazon_tag_menu" action="amazon_tag_action_view_tree" parent="cesumin_apt_menu_root"/>
+</odoo>

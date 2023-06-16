@@ -4,3 +4,4 @@ cesumin_apt.access_amazon_seller,access_amazon_seller,cesumin_apt.model_amazon_s
 cesumin_apt.access_amazon_seller_user,access_amazon_seller_user,cesumin_apt.model_amazon_seller,cesumin_apt_group_user,1,1,1,0
 cesumin_apt.access_amazon_seller_manager,access_amazon_seller_manager,cesumin_apt.model_amazon_seller,cesumin_apt_group_manager,1,1,1,1
 cesumin_apt.access_amazon_tag,access_amazon_tag,cesumin_apt.model_amazon_tag,base.group_user,1,1,1,1
+cesumin_apt.access_amazon_tag_parent,access_amazon_tag_parent,cesumin_apt.model_amazon_tag_parent,base.group_user,1,1,1,1

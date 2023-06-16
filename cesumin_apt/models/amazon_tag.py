@@ -14,3 +14,4 @@ class AmazonTag(models.Model):
     # docs https://www.odoo.com/documentation/16.0/developer/reference/backend/orm.html#fields
     name = fields.Char(index=True)
     color = fields.Integer(default='1')
+    parent_id = fields.Many2one('amazon.tag.parent')
