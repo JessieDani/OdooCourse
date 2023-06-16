@@ -1,0 +1,15 @@
+<odoo>
+    <record id="amazon_seller_sass_field" model="ir.model.fields">
+        <field name="name">x_sass_field</field>
+        <field name="ttype">char</field>
+        <field name="model_id" ref="cesumin_apt.model_amazon_seller" />
+    </record>
+</odoo>
+<!--
+    Equivalente a:
+class AmazonSeller(models.Model)
+    _inherit = 'amazon.seller'
+
+    x_sass_field = fields.Char()
+
+-->
