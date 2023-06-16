@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+cesumin_integration.access_public_api,access_public_api,cesumin_integration.model_public_api,base.group_user,1,0,0,0
