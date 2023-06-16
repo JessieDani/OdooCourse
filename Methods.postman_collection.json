@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "07f1893f-0e25-487a-aa5a-b2b35a2118ba",
+		"name": "Methods",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21241460"
+	},
+	"item": [
+		{
+			"name": "search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"call\",\n    \"params\": {\n        \"service\": \"object\",\n        \"method\": \"execute\",\n        \"args\": [\n            \"{{db}}\",\n            \"{{uid}}\",\n            \"{{password}}\",\n            \"res.groups\",\n            \"search\",\n            [\n            ]\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/jsonrpc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_read",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"call\",\n    \"params\": {\n        \"service\": \"object\",\n        \"method\": \"execute\",\n        \"args\": [\n            \"{{db}}\",\n            \"{{uid}}\",\n            \"{{password}}\",\n            \"res.partner\",\n            \"search_read\",\n            [\n            ],\n            [\n                \"name\",\n                \"email\",\n                \"user_id\"\n            ]\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/jsonrpc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"call\",\n    \"params\": {\n        \"service\": \"object\",\n        \"method\": \"execute\",\n        \"args\": [\n            \"{{db}}\",\n            \"{{uid}}\",\n            \"{{password}}\",\n            \"res.partner\",\n            \"read\",\n            [\n                12\n            ],\n            [\n                \"name\",\n                \"email\"\n            ]\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/jsonrpc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "private_method",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"call\",\n    \"params\": {\n        \"service\": \"object\",\n        \"method\": \"execute\",\n        \"args\": [\n            \"{{db}}\",\n            \"{{uid}}\",\n            \"{{password}}\",\n            \"amazon.seller\",\n            \"_action_context1\",\n            [\n                6\n            ]\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/jsonrpc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "write",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"call\",\n    \"params\": {\n        \"service\": \"object\",\n        \"method\": \"execute\",\n        \"args\": [\n            \"{{db}}\",\n            \"{{uid}}\",\n            \"{{password}}\",\n            \"res.partner\",\n            \"write\",\n            12,\n            {\n                \"name\": \"Ready Nat 2\"\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/jsonrpc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "normal_method",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"call\",\n    \"params\": {\n        \"service\": \"object\",\n        \"method\": \"execute\",\n        \"args\": [\n            \"{{db}}\",\n            \"{{uid}}\",\n            \"{{password}}\",\n            \"res.partner\",\n            \"controller_equivalent\",\n            \"ejemplito\",\n            \"aaaa\",\n            \"bbb\"\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/jsonrpc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"call\",\n    \"params\": {\n        \"service\": \"object\",\n        \"method\": \"execute\",\n        \"args\": [\n            \"{{db}}\",\n            \"{{uid}}\",\n            \"{{password}}\",\n            \"res.partner\",\n            \"create\",\n            {\n                \"name\": \"This is a test\"\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/jsonrpc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authentication",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"call\",\n    \"params\": {\n        \"service\": \"common\",\n        \"method\": \"login\",\n        \"args\": [\n            \"{{db}}\",\n            \"{{login}}\",\n            \"{{password}}\"\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/jsonrpc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "db",
+			"value": "odoo-ps-psbe-carrefour-15-0-sandbox-3523748.dev"
+		},
+		{
+			"key": "url",
+			"value": "https://odoo-ps-psbe-carrefour-15-0-sandbox-3523748.dev.odoo.com"
+		},
+		{
+			"key": "login",
+			"value": "admin"
+		},
+		{
+			"key": "password",
+			"value": "thisisatest"
+		}
+	]
+}
